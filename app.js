@@ -36,6 +36,10 @@ function sortearAmigo(){
     alert('Adicione nomes à lista antes de sortear!');
     return;
   }
+  
+  if(listaDeNomes.length < 3){
+    alert('Por favor, digite 3 nomes antes de Sortear o amigo!');
+  }else{
 
   const indiceSorteado = Math.floor(Math.random() * listaDeNomes.length);
   const nomeSorteado = listaDeNomes[indiceSorteado];
@@ -45,6 +49,9 @@ function sortearAmigo(){
   if (resultado) {
     resultado.textContent = `Nome sorteado é: ${nomeSorteado}`;
    }
+
+  }
+
 }
  
 
