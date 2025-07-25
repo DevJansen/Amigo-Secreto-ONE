@@ -30,6 +30,22 @@ function atualizarListaNaTela() {
 
   });
 }
+
+function sortearAmigo(){
+  if (listaDeNomes.length === 0) {
+    alert('Adicione nomes à lista antes de sortear!');
+    return;
+  }
+
+  const indiceSorteado = Math.floor(Math.random() * listaDeNomes.length);
+  const nomeSorteado = listaDeNomes[indiceSorteado];
+  console.log(nomeSorteado);
+
+  const resultado = document.getElementById('resultado');
+  if (resultado) {
+    resultado.textContent = `Nome sorteado é: ${nomeSorteado}`;
+   }
+}
  
 
 
