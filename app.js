@@ -6,6 +6,12 @@ function adicionarAmigo() {
   const inputNome = document.getElementById('amigo');
   const nomeNovo = inputNome.value.trim();
 
+  if (listaDeNomes.includes(nomeNovo)) {
+    alert('Esse nome já foi adicionado.');
+    input.value = '';
+    return;
+  }
+
   if (nomeNovo!== '') {
 
     listaDeNomes.push(nomeNovo);
@@ -15,7 +21,7 @@ function adicionarAmigo() {
   } else {
     alert('Por favor, digite um nome antes de adicionar!');
   }
-
+  
 }
 
 function atualizarListaNaTela() {
@@ -51,6 +57,15 @@ function sortearAmigo(){
    }
 
   }
+
+}
+
+function reiniciarSorteio() {
+
+  listaDeAmigos = [];  
+  document.getElementById("listaAmigos").innerHTML = "";
+  document.getElementById("resultado").innerHTML = "";
+  alert("Novo sorteio iniciado!");
 
 }
  
